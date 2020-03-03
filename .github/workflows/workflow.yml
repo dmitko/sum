@@ -1,0 +1,17 @@
+name: Main workflow
+on: [push, pull_request]
+jobs:
+  build:
+    name: Run
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Setup python
+          uses: actions/saetup-python@v1
+          with:
+            python-verion: 2.7
+      - name: Install requirements
+          run: |
+            pip install -r requirements.txt
+      - name: test
+          run: pytest
