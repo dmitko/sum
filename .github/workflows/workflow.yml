@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Setup python
-          uses: actions/saetup-python@v1
+          uses: actions/setup-python@v1
           with:
             python-verion: 2.7
       - name: Install requirements
